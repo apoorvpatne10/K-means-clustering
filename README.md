@@ -5,11 +5,9 @@ There's a big mall in a city that contains info about its clients, the clients t
 
 Now what I've got to do is to segment this mall's clients into different groups based on these 2 metrics, the annual income and the spending score. And, since the mall has no idea what this client segments might be or how many segments there would be, this must be a clustering problem because we don't know the exact group of clients that the mall should target.
 
-![alt text](https://i.imgur.com/U0hApjs.png)
+![alt text](https://i.imgur.com/nuZnCgW.png)
 
-![#f03c15](https://placehold.it/15/f03c15/000000?text=+) red
-C1 Careful : CLients in cluster 1 have high income and low spending scores, that is
-they have a high income but don't bother spending much
+![#204DBB](https://placehold.it/15/204DBB/000000?text=+) C1 (Careful) : CLients in cluster 1 have high income and low spending scores, that is they have a high income but don't bother spending much money.
 C2 Standard : Clients in cluster 2 have average income and average spending scores
 C3 Targets : Clients in this cluster have high income and hight spending score, that is the
 cluster of clients that would be the main potential target of the mall marketing 
