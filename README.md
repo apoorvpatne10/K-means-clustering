@@ -8,7 +8,7 @@ Now what I've got to do is to segment this mall's clients into different groups 
 ## Plot
 ![alt text](https://i.imgur.com/nuZnCgW.png)
 
-## Conclusions
+## Conclusion
 ![#E81F1F](https://placehold.it/15/E81F1F/000000?text=+) C1 (Careful) : CLients in cluster 1 have high income and low spending scores, that is they have a high income but don't bother spending much money.
 
 ![#204DBB](https://placehold.it/15/204DBB/000000?text=+) C2 (Standard) : Clients in cluster 2 have average income and average spending scores.
