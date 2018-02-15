@@ -11,11 +11,11 @@ Now what I've got to do is to segment this mall's clients into different groups 
 ## Conclusions
 ![#E81F1F](https://placehold.it/15/E81F1F/000000?text=+) C1 (Careful) : CLients in cluster 1 have high income and low spending scores, that is they have a high income but don't bother spending much money.
 
-![#204DBB](https://placehold.it/15/204DBB/000000?text=+) C2 Standard : Clients in cluster 2 have average income and average spending scores
+![#204DBB](https://placehold.it/15/204DBB/000000?text=+) C2 (Standard) : Clients in cluster 2 have average income and average spending scores.
 
-![#369F23](https://placehold.it/15/369F23/000000?text=+) C3 Targets : Clients in this cluster have high income and hight spending score, that is the cluster of clients that would be the main potential target of the mall marketing agents so it would be very insightful for the mall to understand what kind of products are by the customers in this cluster, so I'll call this cluster as 'targets', which is
-pretty intutive
+![#369F23](https://placehold.it/15/369F23/000000?text=+) C3 (Targets) : Clients in this cluster have high income and hight spending score, that is the cluster of clients that would be the main potential target of the mall marketing agents so it would be very insightful for the mall to understand what kind of products are bought by the customers in this cluster, so I'll call this cluster as 'targets', which is
+pretty intutive.
 
-![#3EDCD0](https://placehold.it/15/3EDCD0/000000?text=+) C4 : Clients in this cluster have a low income but they don't care and spend much 
+![#3EDCD0](https://placehold.it/15/3EDCD0/000000?text=+) C4 (Careless) : Clients in this cluster have a low income but they don't care and spend much. 
 
-![#F065F0](https://placehold.it/15/F065F0/000000?text=+) C5 : Clients in this cluster have low income and low spending score, so I'll label them as 'sensible'
+![#F065F0](https://placehold.it/15/F065F0/000000?text=+) C5 (Sensible) : Clients in this cluster have low income and low spending score, so I'll label them as 'sensible'.
