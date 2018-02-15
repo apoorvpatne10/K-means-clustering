@@ -5,15 +5,17 @@ There's a big mall in a city that contains info about its clients, the clients t
 
 Now what I've got to do is to segment this mall's clients into different groups based on these 2 metrics, the annual income and the spending score. And, since the mall has no idea what this client segments might be or how many segments there would be, this must be a clustering problem because we don't know the exact group of clients that the mall should target.
 
+## Plot
 ![alt text](https://i.imgur.com/nuZnCgW.png)
 
-![#204DBB](https://placehold.it/15/204DBB/000000?text=+) C1 (Careful) : CLients in cluster 1 have high income and low spending scores, that is they have a high income but don't bother spending much money.
-C2 Standard : Clients in cluster 2 have average income and average spending scores
-C3 Targets : Clients in this cluster have high income and hight spending score, that is the
-cluster of clients that would be the main potential target of the mall marketing 
-agents so it would be very insightful for the mall to understand what kind of products
-are by the customers in this cluster, so I'll call this cluster as 'targets', which is
+## Conclusions
+![#E81F1F](https://placehold.it/15/E81F1F/000000?text=+) C1 (Careful) : CLients in cluster 1 have high income and low spending scores, that is they have a high income but don't bother spending much money.
+
+![#204DBB](https://placehold.it/15/204DBB/000000?text=+) C2 Standard : Clients in cluster 2 have average income and average spending scores
+
+![#369F23](https://placehold.it/15/369F23/000000?text=+) C3 Targets : Clients in this cluster have high income and hight spending score, that is the cluster of clients that would be the main potential target of the mall marketing agents so it would be very insightful for the mall to understand what kind of products are by the customers in this cluster, so I'll call this cluster as 'targets', which is
 pretty intutive
-C4 : Clients in this cluster have a low income but they don't care and spend much 
-C5 : Clients in this cluster have low income and low spending score, so I'll label
-them as 'sensible'
+
+![#3EDCD0](https://placehold.it/15/3EDCD0/000000?text=+) C4 : Clients in this cluster have a low income but they don't care and spend much 
+
+![#F065F0](https://placehold.it/15/F065F0/000000?text=+) C5 : Clients in this cluster have low income and low spending score, so I'll label them as 'sensible'
