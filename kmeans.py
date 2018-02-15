@@ -1,32 +1,41 @@
-# Data Preprocessing Template
-"""
-There's a big mall in a city that contains info about its clients, the clients that
-to the membership card. When the client subscribed to the card, they provide
-their general info like customer ID, gender, age and annual income and because they
-have this card they use it to buy all sorts of things in the mall, and therefore the mall
-has a purchase history of each of its client members and that's how they obtain a 
-'Spending Score' ,the last column of the dataset. Spending Score is a score that the
-the manager computed for each client based on several criteria including for eg their
-income, number of times per week they show up in a mall and the amount of money (US dollars)
-they spent in a year and based on this he computed this metric that contains a value
-between 1 and 100, so the closer the spending score is to 1 and the less the client spends
-and closer the score is to 100 the more the client spends. 
-Now what I've got to do is to segment this mall's clients into different groups based
-on these 2 metrics, the annual income and the spending score. And, since the mall has
-no idea what this client segments might be or how many segments there would be, this
-must be a clustering problem because we don't know that.   
-"""
 # Importing the libraries
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
 dataset = pd.read_csv('Mall_Customers.csv')
-X = datset.iloc()
+X = dataset.iloc[:, [3, 4]].values
 
+# Elbow method to find the optimal number of clusters
+from sklearn.cluster import KMeans
+wcss = []
+for i in range(1, 11):
+    kmeans = KMeans(n_clusters = i, init = 'k-means++', max_iter = 300, n_init = 10, 
+                    random_state = 0)
+    kmeans.fit(X)
+    wcss.append(kmeans.inertia_)
+plt.plot(range(1, 11), wcss)
+plt.title('The Elbow Method')
+plt.xlabel('Number of clusters')
+plt.ylabel('WCSS')
+plt.show()
 
+# Applying K-means to the mall dataset and fit the kmeans into the datset 
+# with the right number of clusters
+kmeans = KMeans(n_clusters = 5, init = 'k-means++', max_iter = 300, n_init = 10,
+                random_state = 0)
+y_kmeans = kmeans.fit_predict(X)
 
-
-"""
-
-"""
+# Visualizing the clusters
+plt.scatter(X[y_kmeans == 0, 0], X[y_kmeans == 0, 1], s = 100, c = 'red', label = 'Careful')
+plt.scatter(X[y_kmeans == 1, 0], X[y_kmeans == 1, 1], s = 100, c = 'blue', label = 'Standard')
+plt.scatter(X[y_kmeans == 2, 0], X[y_kmeans == 2, 1], s = 100, c = 'green', label = 'Targets')
+plt.scatter(X[y_kmeans == 3, 0], X[y_kmeans == 3, 1], s = 100, c = 'cyan', label = 'Careless')
+plt.scatter(X[y_kmeans == 4, 0], X[y_kmeans == 4, 1], s = 100, c = 'magenta', label = 'Sensible')
+plt.scatter(kmeans.cluster_centers_[:, 0], kmeans.cluster_centers_[:, 1],s = 300,
+            c = 'yellow', label = 'Centroids')
+plt.title('Cluster of clients')
+plt.xlabel('Annual Income of customers')
+plt.ylabel('Spending Score')
+plt.legend()
+plt.show()
