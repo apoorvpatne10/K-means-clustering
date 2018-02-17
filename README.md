@@ -5,6 +5,9 @@ There's a big mall in a city that contains info about its clients, the clients t
 
 Now what I've got to do is to segment this mall's clients into different groups based on these 2 metrics, the annual income and the spending score. And, since the mall has no idea what this client segments might be or how many segments there would be, this must be a clustering problem because we don't know the exact group of clients that the mall should target.
 
+## Using the elbow method to find the optimal number of clusters 
+![alt text](https://i.imgur.com/lRU2HHC.png)
+
 ## Plot
 ![alt text](https://i.imgur.com/nuZnCgW.png)
 
