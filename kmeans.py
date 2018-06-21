@@ -1,4 +1,4 @@
-# Importing the libraries
+# Importing libraries
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -7,6 +7,7 @@ dataset = pd.read_csv('Mall_Customers.csv')
 X = dataset.iloc[:, [3, 4]].values
 
 # Elbow method to find the optimal number of clusters
+# Kmeans through sklearn
 from sklearn.cluster import KMeans
 wcss = []
 for i in range(1, 11):
